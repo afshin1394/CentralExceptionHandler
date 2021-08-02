@@ -1,0 +1,3 @@
+rootProject.name = "ExceptionHandling"
+include ':app'
+include ':CentralExceptionHandling'
