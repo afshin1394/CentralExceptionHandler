@@ -55,14 +55,6 @@ public abstract class CentralExceptionHandler extends Application implements Thr
             if (AsyncUtils.isUIThread(thread))
             {
                 exceptionCached(crash);
-                switch (politics)
-                {
-                    case EXIT:
-                        System.exit(0);
-                        break;
-                    default:
-                        break;
-                }
             }
             else
             {
@@ -70,14 +62,6 @@ public abstract class CentralExceptionHandler extends Application implements Thr
                     @Override
                     public void uiThreadIsReady() {
                         exceptionCached(crash);
-                        switch (politics)
-                        {
-                            case EXIT:
-                                System.exit(0);
-                                break;
-                            default:
-                                break;
-                        }
                     }
                 });
             }
