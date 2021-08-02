@@ -1,7 +1,11 @@
 package com.samiei.central.exceptionHandling;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
+
+import androidx.multidex.MultiDex;
+import androidx.multidex.MultiDexApplication;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -15,7 +19,6 @@ public abstract class CentralExceptionHandler extends Application implements Thr
     public void onCreate() {
         super.onCreate();
         Thread.setDefaultUncaughtExceptionHandler(this);
-
     }
 
     @Override
@@ -87,5 +90,9 @@ public abstract class CentralExceptionHandler extends Application implements Thr
    }
 
 
-
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 }

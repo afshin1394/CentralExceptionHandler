@@ -12,7 +12,6 @@ public class BaseApplication extends CentralExceptionHandler {
     @Override
     public void onCreate() {
         super.onCreate();
-
     }
 
     @Override
