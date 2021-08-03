@@ -28,7 +28,8 @@ public class BaseApplication extends CentralExceptionHandler {
         String crashFile = crash.getCrashFile();
         String errorMessage = crash.getErrorMessage();
 
-        Log.i("crash", "exceptionCached: "+crash);
+        Log.i("exceptionCached", "exceptionCached: "+crash);
+        System.exit(0);
 
     }
 
