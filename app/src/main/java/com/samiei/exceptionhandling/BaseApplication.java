@@ -14,13 +14,13 @@ public class BaseApplication extends ExceptionHandlerApplication {
 
     @Override
     public void onCreate() {
+
         super.onCreate();
+
     }
 
     @Override
     protected void exceptionCached(Crash crash, List<Activity> activities) {
-//        /**set politics**/
-//        CentralExceptionHandler.setPolitics(Politics.EXIT);
 
 
         /**available details**/
@@ -33,7 +33,6 @@ public class BaseApplication extends ExceptionHandlerApplication {
 
 
         for (Activity activity : activities) {
-            Log.i("exceptionCached", "exceptionCached: "+activity.getLocalClassName());
             activity.finish();
         }
 

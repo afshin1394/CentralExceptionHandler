@@ -18,6 +18,7 @@ public abstract class ExceptionHandlerApplication extends Application implements
     private static Politics politics;
     private List<Activity> activities;
 
+
     protected abstract void exceptionCached(Crash crash, List<Activity> activities);
 
     @Override
@@ -33,6 +34,7 @@ public abstract class ExceptionHandlerApplication extends Application implements
         registerActivityListener();
         activities = new ArrayList<>();
     }
+
 
     @Override
     public void uncaughtException(Thread thread, Throwable throwable) {
@@ -141,27 +143,27 @@ public abstract class ExceptionHandlerApplication extends Application implements
 
                 @Override
                 public void onActivityStarted(Activity activity) {
-                    throw new RuntimeException("stub!");
+
                 }
 
                 @Override
                 public void onActivityResumed(Activity activity) {
-                    throw new RuntimeException("stub!");
+
                 }
 
                 @Override
                 public void onActivityPaused(Activity activity) {
-                    throw new RuntimeException("stub!");
+
                 }
 
                 @Override
                 public void onActivityStopped(Activity activity) {
-                    throw new RuntimeException("stub!");
+
                 }
 
                 @Override
                 public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-                    throw new RuntimeException("stub!");
+
                 }
 
                 @Override
@@ -188,4 +190,13 @@ public abstract class ExceptionHandlerApplication extends Application implements
     public void setActivities(List<Activity> activities) {
         this.activities = activities;
     }
+
+
+    public static Politics getPolitics() {
+        return politics;
+    }
+
+
+
+
 }
