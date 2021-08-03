@@ -34,7 +34,8 @@ public abstract class ExceptionHandlerApplication extends Application implements
         String errorMessage = getString(R.string.noMessage);
 
 
-        if (throwable.getStackTrace()[0] != null) {
+        if (throwable.getStackTrace()[0] != null)
+        {
             try {
                 methodName = throwable.getStackTrace()[0].getMethodName();
             }catch (Exception e){
