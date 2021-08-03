@@ -3,13 +3,11 @@ package com.samiei.central.exceptionHandling;
 import android.app.Application;
 import android.content.Context;
 
-import android.util.Log;
-
 import androidx.multidex.MultiDex;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-public abstract class CentralExceptionHandler extends Application implements Thread.UncaughtExceptionHandler{
+public abstract class ExceptionHandlerApplication extends Application implements Thread.UncaughtExceptionHandler{
 
     private static Politics politics;
     protected abstract void exceptionCached(Crash crash);
@@ -100,7 +98,7 @@ public abstract class CentralExceptionHandler extends Application implements Thr
 
    public static void setPolitics(Politics politics)
    {
-       CentralExceptionHandler.politics = politics;
+       ExceptionHandlerApplication.politics = politics;
    }
 
     @Override

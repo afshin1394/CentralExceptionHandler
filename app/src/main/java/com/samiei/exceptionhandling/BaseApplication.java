@@ -2,11 +2,11 @@ package com.samiei.exceptionhandling;
 
 import android.util.Log;
 
-import com.samiei.central.exceptionHandling.CentralExceptionHandler;
+import com.samiei.central.exceptionHandling.ExceptionHandlerApplication;
 import com.samiei.central.exceptionHandling.Crash;
 
 
-public class BaseApplication extends CentralExceptionHandler {
+public class BaseApplication extends ExceptionHandlerApplication {
 
 
     @Override
