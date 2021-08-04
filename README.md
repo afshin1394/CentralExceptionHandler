@@ -102,16 +102,15 @@ and the other one is the list of your activities that has been added to your act
 
     }
     
-
     ```
+    
+
 In addition you can set default values for your crash details:
 
 
 
 ```
 public class BaseApplication extends ExceptionHandlerApplication {
-
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -127,34 +126,15 @@ public class BaseApplication extends ExceptionHandlerApplication {
     
     
     
-    
-After getting the details of your crashes you can do whatever you want to keep track of your published application.
-for example sending them to your server via socket or api requests:
+        This library also supports androidx multidex library.
 
 
 
 
 
-```
-  @Override
-    protected void exceptionCached(Crash crash, List<Activity> activities) {
 
 
-        /**available details**/
-        String crashClass = crash.getCrashClass();
-        String crashMethod = crash.getCrashMethod();
-        String crashLine = crash.getCrashLine();
-        String crashStacktrace = crash.getCrashStackTrace();
-        String crashFile = crash.getCrashFile();
-        String errorMessage = crash.getErrorMessage();
-        
-        //sending crashes to server via httpRequest or socket... 
-       
-    }
-    
-    ```
 
       
       
-    This library also supports androidx multidex library.
 
