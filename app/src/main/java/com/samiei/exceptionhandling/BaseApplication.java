@@ -30,7 +30,7 @@ public class BaseApplication extends ExceptionHandlerApplication {
         String crashStacktrace = crash.getCrashStackTrace();
         String crashFile = crash.getCrashFile();
         String errorMessage = crash.getErrorMessage();
-
+        Log.i("crasssh", "exceptionCached: "+crash);
 
         for (Activity activity : activities) {
             activity.finish();
