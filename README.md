@@ -102,12 +102,9 @@ and the other one is the list of your activities that has been added to your act
 
     }
     
-    ```
-    
+```
 
 In addition you can set default values for your crash details:
-
-
 
 ```
 public class BaseApplication extends ExceptionHandlerApplication {
@@ -124,9 +121,8 @@ public class BaseApplication extends ExceptionHandlerApplication {
     
 ```
     
-    
-    
-        This library also supports androidx multidex library.
+This library also supports androidx multidex library.    
+
 
 
 
