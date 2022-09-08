@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="undefined">undefined</string>
+    <string name="noMessage">error cause not available</string>
+    <string name="noStackTrace">stacktrace not available</string>
+</resources>
